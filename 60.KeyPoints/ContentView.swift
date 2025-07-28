@@ -15,10 +15,6 @@ struct User: Codable {
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
             decoding()
         }
         .padding()
@@ -34,6 +30,7 @@ struct ContentView: View {
 
         do {
             let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
             
             let user = try decoder.decode(User.self, from: data)
             return Text("Hi, I'm \(user.firstName) \(user.lastName)")
