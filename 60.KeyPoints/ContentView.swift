@@ -22,8 +22,8 @@ struct ContentView: View {
     private func decoding() -> some View {
         let str = """
             {
-                "first_name": "Andrew",
-                "last_name": "Glouberman"
+                "first": "Andrew",
+                "last": "Glouberman"
             }
             """
         let data = Data(str.utf8)
