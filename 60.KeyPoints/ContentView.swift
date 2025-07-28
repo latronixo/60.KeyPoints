@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct User: Codable {
-    enum ZZZCodingKeys: CodingKey {
+    enum CodingKeys: CodingKey {
         case firstName
     }
     
