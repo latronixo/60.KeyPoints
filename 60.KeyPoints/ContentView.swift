@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct User: Codable {
+    enum ZZZCodingKeys: CodingKey {
+        case firstName
+    }
+    
     var firstName: String
     var lastName: String
 }
